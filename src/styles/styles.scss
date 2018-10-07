@@ -1,5 +1,79 @@
-/* Change Font */
+/**
+** ======================== Change Font
+**/
 @font-face {
   font-family: Tahoma;
   src: url('./../assets/fonts/Tahoma/TahomaRegular.ttf');
 }
+
+*:not(.ui-messages-icon):not(i):not(.ui-panelmenu-icon):not(.ui-menuitem-icon):not(span) {
+  font-family: Tahoma;
+}
+
+/**
+** ======================== END Change Font
+**/
+
+/**
+** ======================== Loading Process
+**/
+.ui-blockui .ui-progress-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 30em;
+  height: 18em;
+  /*set to a negative number 1/2 of your height*/
+  margin-top: -9em;
+  /*set to a negative number 1/2 of your width*/
+  margin-left: -15em;
+}
+
+@keyframes ui-progress-spinner-color {
+
+  100%,
+  0% {
+    stroke: #FE4365;
+  }
+
+  20% {
+    stroke: #FC9D9A;
+  }
+
+  40% {
+    stroke: #F9CDAD;
+  }
+
+  60% {
+    stroke: #C8C8A9;
+  }
+
+  80% {
+    stroke: #83AF9B;
+  }
+
+}
+
+/**
+** ======================== End Loading Process
+**/
+
+/**
+** ======================== Set any component
+**/
+
+input.ui-inputtext,
+.ui-dropdown,
+.ui-chips .ui-inputtext {
+  width: 100% !important;
+}
+
+.ui-dropdown-items li:not(.ui-dropdown-item) {
+  text-align: center;
+  height: 30px;
+  margin-top: 10px;
+}
+
+/**
+** ======================== End Set any component 
+**/

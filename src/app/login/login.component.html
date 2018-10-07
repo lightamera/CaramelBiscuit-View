@@ -1,0 +1,53 @@
+<p-blockUI [blocked]="loadingPage">
+  <p-progressSpinner></p-progressSpinner>
+</p-blockUI>
+
+<div class="ui-g login-page">
+
+  <div class="ui-g-12 ui-lg-4 ui-md-3 ui-sm-hide"></div>
+
+  <div class="ui-g-12 ui-lg-4 ui-md-6 ui-sm-12 login-detail" style="text-align:center">
+
+    <p-card class="login-form">
+
+      <div class="ui-g">
+
+        <div class="ui-g-12">
+
+          <h1>Caramel Biscuit</h1>
+
+          <div class="emptybox20"></div>
+
+          <p *ngIf="message != ''" class="validate-message">{{message}}</p>
+
+          <div class="emptybox5"></div>
+
+          <input id="user-name" type="text" placeholder="ชื่อผู้ใช้" [(ngModel)]="userName" autofocus pInputText />
+
+          <div class="emptybox20"></div>
+
+          <input id="password" type="password" placeholder="รหัสผ่าน" [(ngModel)]="password" (keyup)="checkLoginEnterKey($event)"
+            pInputText />
+
+          <div class="emptybox20"></div>
+
+        </div>
+
+        <div class="ui-g-12 login-btn-panel">
+
+          <button class="login-btn" type="button" label="เข้าระบบ" pButton (click)="loginButtonOnClick()"></button>
+
+          <div class="emptybox20"></div>
+
+        </div>
+
+
+      </div>
+
+    </p-card>
+
+  </div>
+
+  <div class="ui-g-12 ui-lg-4 ui-md-3 ui-sm-hide"></div>
+
+</div>
