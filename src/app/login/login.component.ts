@@ -30,6 +30,6 @@ export class LoginComponent extends ComponentView implements OnInit {
   }
 
   async loginButtonOnClick() {
-
+    this.loadingPage = true;
   }
 }
