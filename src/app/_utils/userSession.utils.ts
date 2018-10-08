@@ -1,10 +1,10 @@
 import { UserSession } from '../_model/userSession.model';
 import { User } from '../_model/user.model';
 
-export class UserSessionUtil {
+export class UserSessionUtils {
 
     static checkPrivilageByCode(privilegeCode: string): boolean {
-        for (const privilege of UserSessionUtil.getUserSession().user.privileges) {
+        for (const privilege of this.getUserSession().user.privileges) {
             if (privilege.code === privilegeCode) {
                 return true;
             }

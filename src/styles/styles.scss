@@ -1,3 +1,6 @@
+$backGroudColor : #f5f5f5;
+$mainColor: #99c35f;
+
 /**
 ** ======================== Change Font
 **/
@@ -77,3 +80,7 @@ input.ui-inputtext,
 /**
 ** ======================== End Set any component 
 **/
+
+body {
+  background-color: $backGroudColor;
+}

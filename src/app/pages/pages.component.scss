@@ -1,0 +1,181 @@
+$headerColor: #99c35f;
+$textColor: #FFF;
+$textColorAHolder: #000;
+
+@media screen and (min-width: 641px) {
+  .header-bar {
+    height: 50px;
+    background-color: $headerColor;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+
+    .header-detail {
+      width: 50%;
+
+      .menu-button {
+        display: none;
+      }
+
+      .header-text {
+        color: $textColor;
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      a:hover .header-text {
+        color: $textColorAHolder;
+      }
+
+    }
+
+    .user-info {
+      width: 50%;
+      text-align: right;
+      margin-top: 5px;
+
+      i {
+        color: $textColor;
+        font-size: 18px;
+      }
+
+      small {
+        color: $textColor;
+        font-size: 14px;
+      }
+
+      a:hover small {
+        color: $textColorAHolder;
+      }
+
+    }
+
+  }
+
+  .top-bar {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+
+    .ui-menubar {
+      border-bottom: 1px solid $headerColor;
+    }
+  }
+
+  .content {
+    margin-top: 70px;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .header-bar {
+    height: 38px;
+    background-color: $headerColor;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+
+    .header-detail {
+      width: 100%;
+      text-align: center;
+      margin-top: -3px;
+
+      .header-text {
+        color: $textColor;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      a:hover .header-text {
+        color: $textColorAHolder;
+      }
+
+      .menu-button {
+        position: fixed;
+        top: 10;
+        left: 0;
+        background-color: transparent !important;
+        border: none;
+        margin-top: -1px;
+      }
+
+      .menu-button:hover {
+        color: $textColorAHolder;
+      }
+    }
+
+    .user-info {
+      display: none;
+    }
+
+  }
+
+
+  .top-bar {
+    display: none;
+  }
+
+}
+
+.content {
+
+  .content-detail {
+    background-color: #FFF;
+    border-radius: 10px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    .content-blank {
+      width: 10%;
+    }
+
+    .content-detail {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 1365px) {
+    .content-blank {
+      display: none;
+    }
+
+    .content-detail {
+      width: 100%;
+    }
+  }
+
+}
+
+.ui-submenu ul {
+    width: 230px;
+} 
+
+.side-bar-menu .ui-sidebar {
+  padding: 0 !important;
+
+  .ui-sidebar-close {
+    display: none;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header.ui-state-active,
+  .ui-panelmenu .ui-panelmenu-header.ui-state-active a {
+    border-color: $headerColor;
+    background: $headerColor;
+    color: #FFFFFF;
+  }
+
+  .user-info {
+    text-align: center;
+
+    i {
+      font-size: 300%;
+    }
+  }
+}

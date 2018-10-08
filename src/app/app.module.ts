@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ButtonModule, CardModule, InputTextModule, PasswordModule, BlockUIModule, ProgressSpinnerModule } from 'primeng/primeng';
+import { ButtonModule, CardModule, InputTextModule, PasswordModule, BlockUIModule, ProgressSpinnerModule, MessagesModule, MessageModule, MegaMenuModule, SidebarModule, OverlayPanelModule, MenuModule, MenubarModule, TieredMenuModule, PanelMenuModule, ToolbarModule, ScrollPanelModule } from 'primeng/primeng';
+import { LoginService } from './_service/login.service';
+import { PagesComponent } from './pages/pages.component';
+import { AuthGuard } from './_guard/auth.guard';
+import { PassToPagesGuard } from './_guard/pass-to-pages.guard';
+import { PrivilegeGuard } from './_guard/privilege.guard';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    PagesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +33,25 @@ import { ButtonModule, CardModule, InputTextModule, PasswordModule, BlockUIModul
     InputTextModule,
     PasswordModule,
     BlockUIModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    MessagesModule,
+    MessageModule,
+    MegaMenuModule,
+    SidebarModule,
+    OverlayPanelModule,
+    MenuModule,
+    MenubarModule,
+    TieredMenuModule,
+    PanelMenuModule,
+    ToolbarModule,
+    ScrollPanelModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    PassToPagesGuard,
+    PrivilegeGuard,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
